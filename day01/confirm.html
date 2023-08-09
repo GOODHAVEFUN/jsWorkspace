@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>확인 대화상자 confirm()</title>
+</head>
+<body>
+</body>
+<script>
+    var msg = "";
+    if(confirm("결제하시겠습니까? ")){
+        msg = "결제되었습니다";
+    }else{
+        msg = "결제취소";
+    }
+
+    document.write("<p>" + msg + "<p>");
+</script>
+</html>

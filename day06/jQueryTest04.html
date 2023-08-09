@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>jQuery 전체동의</title>
+</head>
+<body>
+    <form action="" name="myForm">
+        <div>
+            <label>
+                전체동의
+                <input type="checkbox" class="all">
+            </label>
+        </div>
+        <div>
+            <label>
+                서비스 이용약관 동의
+                <input type="checkbox" name="term1" class="term">
+            </label>
+        </div>
+        <div>
+            <label>
+                정보 수집 동의
+                <input type="checkbox" name="term2" class="term">
+            </label>
+        </div>
+        <div>
+            <label>
+                개인정보 이용약관 동의
+                <input type="checkbox" name="term3" class="term">
+            </label>
+        </div>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script>
+    var $all = $(".all");
+    var $inputs = $(".term");
+
+    $all.on('click', function(){
+        if($(this).is(":checked")){
+            $inputs.prop('checked', true);
+        }else{
+            $inputs.prop('checked', false);
+        }
+    })
+</script>
+</html>

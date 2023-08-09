@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>아이디를 이용한 선택</title>
+    <style>
+        #odd{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <H1>아이디를 이용한 선택</H1>
+    <div id = "odd">
+        첫번째 DIV입니다
+    </div>
+    <div>
+        두번째 DIV입니다
+    </div>
+    <div id = "odd">
+        세번째 DIV입니다
+    </div>
+    <div>
+        네번째 DIV입니다
+    </div>
+    <div id = "odd">
+        다섯번째 DIV입니다
+    </div>
+</body>
+<script>
+    const div = document.getElementById("odd");
+    //아이디가 odd인 첫번째 <div>요소를 선택하여 변경됨
+    div.style.color = "red";
+</script>
+</html>

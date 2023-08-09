@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+        .flex {
+            display: flex;
+        }
+        input {
+            width: 300px;
+        }
+        button {
+            width: 100px;
+        }
+
+        /* 특정 속성을 가진 input에만 스타일 지정하기 */
+        input[type='checkbox'],
+        input[type='radio'] {
+            width: 50px;
+        }
+        </style>
+        <script defer src="input.js"></script>
+    </head>
+    <body>
+        <form action="">
+        <fieldset>
+            <legend>인풋, 버튼 테스트</legend>
+            <label class="flex">
+            <span>텍스트1 : </span>
+            <input type="text" class="input-test1" />
+            </label>
+            <label class="flex">
+            <span>텍스트2 : </span>
+            <input type="text" class="input-test2" />
+            </label>
+            <button type="submit">버튼</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>체크박스 테스트</legend>
+            <div>체크박스</div>
+            <label>
+            <span>검정</span>
+            <input type="checkbox" name="color" value="black" class="color" checked />
+            </label>
+            <label>
+            <span>빨강</span>
+            <input type="checkbox" name="color" value="red" class="color" />
+            </label>
+            <label>
+            <span>파랑</span>
+            <input type="checkbox" name="color" value="blue" class="color" />
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>라디오 테스트</legend>
+            <label>
+            <span>피자</span>
+            <input type="radio" name="radio" value="pizza" class="food" />
+            </label>
+            <label>
+            <span>햄버거</span>
+            <input type="radio" name="radio" value="hamburger" class="food" checked />
+            </label>
+            <label>
+            <span>파스타</span>
+            <input type="radio" name="radio" value="pasta" class="food" />
+            </label>
+        </fieldset>
+        </form>
+    </body>
+</html>

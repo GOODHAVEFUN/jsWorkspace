@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>setInterval()</title>
+</head>
+<body>
+    <div id = "wrap"></div>
+</body>
+<script>
+    //setInterval(함수, 밀리초)
+    //clearInterval(setInterval함수)
+
+    //1초마다 실행되는 반복작업을 하는 setInterval 함수 호출
+    var inter = setInterval(function(){ 
+        const div = document.getElementById('wrap'); //wrap요소 가져옴
+        let h2 = document.createElement('h2'); //h2요소 생성
+        h2.innerHTML = "김영선"; //h2요소의 내용을 김영선으로 설정
+        div.appendChild(h2); //h2요소를 wrap 요소의 자식으로 추가
+    }, 1000)
+
+    //7초후에 setInterval로 설정한 반복작업을 멈추기 위해 clearInterval함수 호출
+    setTimeout(function() {
+        clearInterval(inter); 
+        //inter 변수에 저장된 setInterval함수를 clearInterval함수로 취소하여 반복작업을 멈춤
+    }, 7000)
+</script>
+</html>

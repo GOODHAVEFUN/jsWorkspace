@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 체크박스</title>
+</head>
+<body>
+    <form action="" name="myForm">
+        <div>
+            <label>
+                서비스 이용약관 동의
+                <input type="checkbox" name="term1" class="term">
+            </label>
+        </div>
+        <div>
+            <label>
+                정보 수집 동의
+                <input type="checkbox" name="term2" class="term">
+            </label>
+        </div>
+        <div>
+            <label>
+                개인정보 이용약관 동의
+                <input type="checkbox" name="term3" class="term">
+            </label>
+        </div>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script>
+    var $inputs = $(".term");
+    //$inputs.get(0).prop('checked', true); //내부요소가 JS이기 때문에 prop() 인식불가
+    //$inputs[0].get.prop('checked', true); //내부요소가 JS이기 때문에 prop() 인식불가
+    $($inputs.get(0)).prop('checked', true);
+    $($inputs[1]).prop('checked', true);    
+
+    $inputs.on('click', function(){
+        //jQuery를 사용하여 객체를 여러개 가져왓을때
+        //안에 있는 요소를 this로 접근하면 javascript로 변경된다
+        //이 때 $()로 묶어서 jQuery로 변경시켜야 jQuery 문법을 사용할 수 있다
+        console.log($(this).is(":checked")); //체크 여부 검사
+        console.log($(this).prop('checked')); //값 변경에 자주 사용
+    })
+
+</script>
+</html>

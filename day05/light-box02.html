@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>light-box01</title>
+    <link rel="stylesheet" href = "light-box01.css" >
+    <script defer src="light-box02.js"></script>
+</head>
+<body>
+    <main>
+        <div class="img-box">
+            <!-- data 속성 -->
+            <!-- 
+                data-scr 속성을 활용함
+                data 속성은 'data-' 시작함
+                개발자가 필요한 데이터를 저장하는 속성이다
+            -->
+            <button type="button" data-src="https://cdn.pixabay.com/photo/2023/01/22/15/16/ocean-7736669_640.jpg">
+                이미지1
+            </button>
+        </div>
+        <div class="img-box">
+            <button type="button" data-src="https://cdn.pixabay.com/photo/2022/09/02/11/43/wall-7427386_1280.jpg">
+                이미지2
+            </button>
+           
+        </div>
+        <div class="img-box">
+            <button type="button" data-src="https://cdn.pixabay.com/photo/2023/01/08/16/29/sea-7705679_1280.jpg">
+                이미지3
+            </button>
+        </div>
+        <div class="img-box">
+            <button type="button" data-src="https://cdn.pixabay.com/photo/2023/02/04/09/20/castle-7766794_960_720.jpg">
+                이미지4
+            </button>
+        </div>
+        <div class="img-box">
+            <button type="button" data-src=""https://cdn.pixabay.com/photo/2013/11/28/10/03/river-219972_960_720.jpg">
+                이미지5
+            </button>
+        </div>
+        
+        <div class="big-img-wrap">
+            <div class="big-img-box">
+                <img src = "" alt ="" class="big-img">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- 1. writeTask.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+        <!-- 
+        <br>태그를 사용하지 않고, 덧셈의 결과는 직접 연산을 통해 출력한다.
+        아래의 문서를 그대로 write(), writeln()을 사용하여 작성한다.
+     -->
+    <!--
+        document.write()활용
+        --------------------(hr태그)
+        Welcome!
+        
+        2 + 5는
+        7입니다.
+    -->
+</body>
+<script>
+
+    //with는 반복 객체 사용을 편하게 사용하기 위해 작성한다
+    //with(객체명){ 실행할문장; }
+    //실행할 문장 앞에는 항상 객체명.이 붙게 된다
+
+    with(document){
+        write("<h1>document.write()활용</h1>");
+        write("<hr>");
+        write("<h2>Welcome!</h2>");
+        write("<pre>");
+        writeln("2 + 5는");
+        write(2 + 5 + "입니다.");
+        write("</pre>");
+    }
+</script>
+</html>
